@@ -1,0 +1,202 @@
+html,
+body{
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+body{
+    background-color:rgb(0, 89, 191);
+    position: relative;
+    font-size: 9px;
+}
+
+.ticket{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 340px;
+    transform: translate(-50%, -50%);
+    color: rgb(83, 83, 83);
+}
+
+.ticket-header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 35px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    background-color: black;
+}
+
+.head-logo{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.head-flight{
+    font-size: 11px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.ticket-body{
+    position: relative;
+    border-bottom: 1px dashed rgb(8, 2, 62);
+    background-color: white;
+}
+
+.ticket-body::before,
+.ticket-body::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: rgb(0, 89, 191);
+}
+
+.ticket-body::before{
+    right: 100%;
+    transform: translate(8px, -8px);
+}
+
+.ticket-body::after{
+    left: 100%;
+    transform: translate(-8px, -8px);
+}
+
+.locations{
+    display: flex;
+    align-items: center;
+}
+
+.locations,
+.info,
+.flight {
+    display: flex;
+    align-items: center;
+}
+
+.locations {
+    padding: 20px 35px;
+    border-bottom: 1px solid wheat;
+}
+
+.loc-depart,
+.loc-direction,
+.loc-arrive {
+    flex-grow: 1;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h1 {
+    margin: 5px 0;
+    font-size: 26px;
+    color: rgb(50, 50, 50);
+}
+
+h2 {
+    margin: 3px 0 0;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(50, 50, 50);
+}
+
+.arrow {
+    position: relative;
+    background-color: rgb(234, 174, 63);
+    width: 20px;
+    height: 2px;
+    display: inline-block;
+}
+
+.arrow::before,
+.arrow::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: rgb(234, 174, 63);
+}
+
+.arrow::before {
+    transform: rotate(45deg);
+    transform-origin: 17px 6px;
+}
+
+.arrow::after {
+    transform: rotate(-45deg);
+    transform-origin: 16px -5px;
+}
+
+.body-info {
+    padding: 20px 35px;
+}
+
+.info {
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+
+.info-name,
+.info-seat {
+    text-transform: uppercase;
+}
+
+.info-name h2,
+.info-seat h2 {
+    text-transform: none;
+}
+
+.info-seat {
+    text-align: right;
+}
+
+.flight {
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.flight-info h2,
+.flight-info-date h2,
+.flight-depart-time h2 {
+    text-transform: none;
+}
+
+.ticket-bottom {
+    border-radius: 0 0 10px 10px;
+    background-color: white;
+}
+
+.bottom-info {
+    padding: 20px 35px;
+}
+
+.depart{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.depart h2{
+    text-transform: none;
+}
+
+.depart-barcode {
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(to right, #000 0%, #000 20%,
+    #fff 20%, #fff 40%, #000 40%,
+    #000 50%, #fff 50%, #fff 70%,
+    #000 70%, #000 90%, #fff 90%,
+    #fff 90%, #fff 100%
+    );
+    background-size: 7.5% 100%;
+}
